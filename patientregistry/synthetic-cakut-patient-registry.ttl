@@ -1,0 +1,44 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix fdp: <https://w3id.org/fdp/fdp-o#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix datacite: <http://purl.org/spar/datacite/>.
+@prefix sio: <http://semanticscience.org/resource/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix ejp: <https://w3id.org/ejp-rd/vocabulary#>.
+
+<https://luizbonino.github.io/synthetic-rkpa-fdp/patientregistry/synthetic-cakut-patient-registry.ttl> a dcat:Resource, ejp:PatientRegistry;
+    dct:accessRights <https://w3id.org/ejp-rd/resources/licenses/v1.0/>;
+    dct:conformsTo <https://luizbonino.github.io/synthetic-rkpa-fdp/profile/patientregistry.ttl>;
+    dct:description "A fictional registry of patients with congenital anomalies of the kidney and urinary tract, created for the ERDERA D11 demonstrator. Contains no real data.";
+    dct:isPartOf <https://luizbonino.github.io/synthetic-rkpa-fdp/catalog/synthetic-rkpa-resources.ttl>;
+    dct:issued "2026-11-06T00:00:00"^^xsd:dateTime;
+    dct:language <http://id.loc.gov/vocabulary/iso639-1/en>;
+    dct:license <https://w3id.org/ejp-rd/resources/licenses/v1.0/>;
+    dct:modified "2026-11-06T00:00:00"^^xsd:dateTime;
+    dct:publisher <https://luizbonino.github.io/synthetic-rkpa-fdp/patientregistry/synthetic-cakut-patient-registry.ttl#publisher>;
+    dct:title "SYNTHETIC CAKUT Patient Registry";
+    rdfs:label "SYNTHETIC CAKUT Patient Registry";
+    dcat:contactPoint <https://luizbonino.github.io/synthetic-rkpa-fdp/patientregistry/synthetic-cakut-patient-registry.ttl#contactPoint>;
+    dcat:keyword "CAKUT", "patient registry", "synthetic";
+    dcat:landingPage <https://example.org/synthetic-rkpa/registry>;
+    dcat:theme <http://www.orpha.net/ORDO/Orphanet_93545>;
+    dcat:version "0.1";
+    ejp:populationCoverage _:b0;
+    ejp:vpConnection ejp:VPDiscoverable;
+    fdp:metadataIdentifier <https://luizbonino.github.io/synthetic-rkpa-fdp/patientregistry/synthetic-cakut-patient-registry.ttl#identifier>;
+    fdp:metadataIssued "2026-11-06T14:46:49.980Z"^^xsd:dateTime;
+    fdp:metadataModified "2026-11-06T14:46:49.980Z"^^xsd:dateTime.
+<https://luizbonino.github.io/synthetic-rkpa-fdp/patientregistry/synthetic-cakut-patient-registry.ttl#contactPoint> a vcard:Agent;
+    vcard:url <mailto:registry@example.org>.
+<https://luizbonino.github.io/synthetic-rkpa-fdp/patientregistry/synthetic-cakut-patient-registry.ttl#identifier> a datacite:Identifier;
+    dct:identifier "https://luizbonino.github.io/synthetic-rkpa-fdp/patientregistry/synthetic-cakut-patient-registry.ttl".
+<https://luizbonino.github.io/synthetic-rkpa-fdp/patientregistry/synthetic-cakut-patient-registry.ttl#publisher> a foaf:Organization;
+    dct:description "A fictional patient organisation used for the ERDERA D11 demonstrator. Not a real organisation.";
+    dcat:landingPage <https://example.org/synthetic-rkpa>;
+    foaf:name "SYNTHETIC Rare Kidney Patient Alliance".
+<https://luizbonino.github.io/synthetic-rkpa-fdp/profile/patientregistry.ttl> rdfs:label "Patient Registry Profile".
+_:b0 a sio:SIO_001166;
+    rdfs:label "National".

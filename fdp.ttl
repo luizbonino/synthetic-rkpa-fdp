@@ -1,0 +1,47 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix fdp: <https://w3id.org/fdp/fdp-o#>.
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix datacite: <http://purl.org/spar/datacite/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix ejp: <https://w3id.org/ejp-rd/vocabulary#>.
+
+<https://luizbonino.github.io/synthetic-rkpa-fdp/fdp.ttl> a dcat:Resource, fdp:FAIRDataPoint, fdp:MetadataService;
+    dct:accessRights <https://luizbonino.github.io/synthetic-rkpa-fdp/fdp.ttl#accessRights>;
+    dct:conformsTo <https://luizbonino.github.io/synthetic-rkpa-fdp/profile/fdp.ttl>;
+    dct:description "The resources of the fictional SYNTHETIC Rare Kidney Patient Alliance, published with FDPlight for the ERDERA D11 demonstrator. Not a real organisation; contains no real data."@en;
+    dct:language <http://id.loc.gov/vocabulary/iso639-1/en>;
+    dct:license <https://w3id.org/ejp-rd/resources/licenses/v1.0/>;
+    dct:publisher <https://luizbonino.github.io/synthetic-rkpa-fdp/fdp.ttl#publisher>;
+    dct:title "SYNTHETIC Rare Kidney Patient Alliance FAIR Data Point"@en;
+    rdfs:label "SYNTHETIC Rare Kidney Patient Alliance FAIR Data Point";
+    dcat:contactPoint <https://luizbonino.github.io/synthetic-rkpa-fdp/fdp.ttl#contactPoint>;
+    dcat:endpointURL <https://luizbonino.github.io/synthetic-rkpa-fdp/fdp.ttl>;
+    dcat:keyword "CAKUT", "patient organisation", "synthetic";
+    dcat:theme <http://www.orpha.net/ORDO/Orphanet_93545>;
+    ejp:vpConnection ejp:VPDiscoverable;
+    fdp:conformsToFdpSpec <https://w3id.org/fdp/fdp-o/1.2>;
+    fdp:fdpSoftwareVersion "FDPlight:0.1.0";
+    fdp:metadataCatalog <https://luizbonino.github.io/synthetic-rkpa-fdp/catalog/synthetic-rkpa-resources.ttl>;
+    fdp:metadataIdentifier <https://luizbonino.github.io/synthetic-rkpa-fdp/fdp.ttl#identifier>;
+    fdp:metadataIssued "2026-11-06T14:46:49.980Z"^^xsd:dateTime;
+    fdp:metadataModified "2026-11-06T14:46:49.980Z"^^xsd:dateTime.
+<https://luizbonino.github.io/synthetic-rkpa-fdp/fdp.ttl#accessRights> a dct:RightsStatement;
+    dct:description "This resource has no access restriction".
+<https://luizbonino.github.io/synthetic-rkpa-fdp/fdp.ttl#catalog> a ldp:DirectContainer;
+    dct:title "Catalogs";
+    ldp:contains <https://luizbonino.github.io/synthetic-rkpa-fdp/catalog/synthetic-rkpa-resources.ttl>;
+    ldp:hasMemberRelation fdp:metadataCatalog;
+    ldp:membershipResource <https://luizbonino.github.io/synthetic-rkpa-fdp/fdp.ttl>.
+<https://luizbonino.github.io/synthetic-rkpa-fdp/fdp.ttl#contactPoint> a vcard:Agent;
+    vcard:url <mailto:registry@example.org>.
+<https://luizbonino.github.io/synthetic-rkpa-fdp/fdp.ttl#identifier> a datacite:Identifier;
+    dct:identifier "https://luizbonino.github.io/synthetic-rkpa-fdp/fdp.ttl".
+<https://luizbonino.github.io/synthetic-rkpa-fdp/fdp.ttl#publisher> a foaf:Organization;
+    dct:description "A fictional patient organisation used for the ERDERA D11 demonstrator. Not a real organisation.";
+    dcat:landingPage <https://example.org/synthetic-rkpa>;
+    foaf:name "SYNTHETIC Rare Kidney Patient Alliance".
+<https://luizbonino.github.io/synthetic-rkpa-fdp/profile/fdp.ttl> rdfs:label "FAIR Data Point Profile".
